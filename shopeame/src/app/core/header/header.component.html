@@ -1,13 +1,13 @@
-<header>
-
-    <h1><span>S</span>Shopéame!</h1>
-
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Prods</a></li>
-            <li><a href="#">Gestión</a></li>
-        </ul>
+<header class="header">
+    <div class="header__up">
+      <div class="header__logo">S</div>
+      <h1 class="header__title">Shopéame!</h1>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li class="header__item"><i class="fa-solid fa-radiation header__item--icon"></i><a class="header__item--link" [routerLink]="'/homepage'">Home</a></li>
+        <li class="header__item"><i class="fa-solid fa-binoculars header__item--icon"></i><a class="header__item--link" href="">Prods.</a></li>
+        <li class="header__item"><i class="fa-solid fa-dharmachakra header__item--icon"></i><a class="header__item--link" [routerLink]="'/management'">Gestión</a></li>
+      </ul>
     </nav>
-
-</header>
+  </header>
