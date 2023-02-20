@@ -11,7 +11,11 @@ const routes: Routes = [
   {
     path: 'homepage', component: WelcomeComponent
   },
-  // {path: '', redirectTo: 'homepage', pathMatch: 'full'}
+  {
+    path: 'products', loadChildren: () =>
+    import('./product-page/product-page.module').then(m => m.ProductPageModule)
+  },
+  {path: '', redirectTo: 'homepage', pathMatch: 'full'}
 
 ];
 
