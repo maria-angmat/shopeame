@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { HomepageModule } from './homepage/homepage.module';
 import { ManagementModule } from './management/management.module';
 import { ProductPageModule } from './product-page/product-page.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ProductPageModule } from './product-page/product-page.module';
     CoreModule,
     HomepageModule,
     ManagementModule,
+    HttpClientModule,
     ProductPageModule
   ],
   providers: [],
