@@ -1,1 +1,28 @@
-<p>form works!</p>
+<div class="mng">
+    <h2 class="mng__title">Creación/edición de Productos</h2>
+    
+    <form class="mng__form" novalidate (ngSubmit)="onSubmit()" [formGroup]="createProduct">
+        <fieldset class="form">
+            <label class="form__label">Nombre del producto:</label>
+            <input class="form__input" type="text" id="name" formControlName="name" [(ngModel)]="parentValue.name" placeholder="Por ej: Tiesto para planta">
+    
+            <label class="form__label">Precio:</label>
+            <input class="form__input" type="number" id="price" formControlName="price" [(ngModel)]="parentValue.price" placeholder="Por ej: 9,50">
+    
+            <label class="form__label">Descripción:</label>
+            <input class="form__input" type="text" id="description" formControlName="description" [(ngModel)]="parentValue.description" placeholder="Por ej: Lo más vendido este mes">
+    
+            <label class="form__label">Ruta de la imagen:</label>
+            <input class="form__input" type="text" id="image" formControlName="image" [(ngModel)]="parentValue.image" placeholder="Por ej: https://blabla.com/img.jpg">
+    
+            <label class="form__label">Opiniones:</label>
+            <input class="form__input" type="number" id="stars" formControlName="stars" [(ngModel)]="parentValue.stars" placeholder="Por ej: 4.28">
+        </fieldset>
+        <button class="form__btn" type="submit">Guardar</button>
+    </form>
+    
+    <div class="mng__preview">
+        <p class="mng__preview--p">Preview del producto:</p>
+        <app-product-template [product]="parentValue"></app-product-template>
+    </div>
+</div>

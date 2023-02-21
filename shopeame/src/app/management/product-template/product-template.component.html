@@ -1,19 +1,20 @@
 <div class="products-list">
-    <div class="product" *ngFor="let product of products">
+    <div class="product">
       <div class="product__image">
         <img [src]="product.image" [alt]="product.name">
       </div>
       <div class="product__info">
-        <h2 class="product__title">{{ product.name }}</h2>
-        <p class="product__description">{{ product.description }}</p>
+        <h2 class="product__title">{{product.name}}</h2>
+        <p class="product__description"> {{product.description}} </p>
         <div class="product__price">
-          <span class="product__price-amount">{{ product.price | currency }}</span>
+          <span class="product__price-amount"> {{product.price}}</span>
         </div>
         <div class="product__rating">
           <i class="fas fa-star" *ngFor="let star of [1, 2, 3, 4, 5]"></i>
-          <span class="product__rating-count">{{ product.rating.count }}</span>
+          <span class="product__rating-count">{{product.stars}}</span>
         </div>
         <button class="product__button">Comprar ahora</button>
       </div>
     </div>
   </div>
+

@@ -3,15 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { ManagementRoutingModule } from './management-routing.module';
 import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProductTemplateComponent } from './product-template/product-template.component';
 
 
 @NgModule({
   declarations: [
-    FormComponent
+    FormComponent,
+    ProductTemplateComponent
   ],
   imports: [
     CommonModule,
-    ManagementRoutingModule
+    ReactiveFormsModule,
+    ManagementRoutingModule,
   ],
   exports: [
     FormComponent

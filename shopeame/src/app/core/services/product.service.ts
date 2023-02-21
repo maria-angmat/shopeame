@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class ProductService {
 
   private apiUrl = 'https://my-json-server.typicode.com/franlindebl/shopeame-api-v2/products';
+  product: any;
 
   constructor(private http: HttpClient) { }
 
