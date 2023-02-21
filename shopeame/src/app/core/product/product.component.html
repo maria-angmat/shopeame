@@ -1,5 +1,6 @@
 <div class="products-list">
-    <div class="product" *ngFor="let product of products">
+  <div class="product-row">
+    <div class="product" *ngFor="let product of filteredProducts">
       <div class="product__image">
         <img [src]="product.image" [alt]="product.name">
       </div>
@@ -11,10 +12,10 @@
         </div>
         <div class="product__rating">
           <i class="fas fa-star" *ngFor="let star of [1, 2, 3, 4, 5]"></i>
-          <span class="product__rating-count">{{ product.rating.count }}</span>
+          <span class="product__rating-count">{{ product.stars }}</span>
         </div>
         <button class="product__button">Comprar ahora</button>
       </div>
     </div>
   </div>
-  
+</div>
